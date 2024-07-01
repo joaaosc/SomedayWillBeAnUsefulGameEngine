@@ -1,0 +1,18 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/home/joao/RiderProjects/ProjectA/Project1/Content/beach135.png","/home/joao/RiderProjects/ProjectA/Project1/Content/beach135.xnb","TextureProcessor","Texture2DContent",3096,16469,0,2827074
+"/home/joao/RiderProjects/ProjectA/Project1/Content/beach225.png","/home/joao/RiderProjects/ProjectA/Project1/Content/beach225.xnb","TextureProcessor","Texture2DContent",3034,16469,0,0069111
+"/home/joao/RiderProjects/ProjectA/Project1/Content/beach315.png","/home/joao/RiderProjects/ProjectA/Project1/Content/beach315.xnb","TextureProcessor","Texture2DContent",2799,16469,0,0133363
+"/home/joao/RiderProjects/ProjectA/Project1/Content/beach45.png","/home/joao/RiderProjects/ProjectA/Project1/Content/beach45.xnb","TextureProcessor","Texture2DContent",2984,16469,0,0038495
+"/home/joao/RiderProjects/ProjectA/Project1/Content/grass135.png","/home/joao/RiderProjects/ProjectA/Project1/Content/grass135.xnb","TextureProcessor","Texture2DContent",4682,16469,0,0096521
+"/home/joao/RiderProjects/ProjectA/Project1/Content/grass225.png","/home/joao/RiderProjects/ProjectA/Project1/Content/grass225.xnb","TextureProcessor","Texture2DContent",4666,16469,0,0030914
+"/home/joao/RiderProjects/ProjectA/Project1/Content/grass315.png","/home/joao/RiderProjects/ProjectA/Project1/Content/grass315.xnb","TextureProcessor","Texture2DContent",4684,16469,0,0031758
+"/home/joao/RiderProjects/ProjectA/Project1/Content/grass45.png","/home/joao/RiderProjects/ProjectA/Project1/Content/grass45.xnb","TextureProcessor","Texture2DContent",4558,16469,0,0024232
+"/home/joao/RiderProjects/ProjectA/Project1/Content/grass45alt.png","/home/joao/RiderProjects/ProjectA/Project1/Content/grass45alt.xnb","TextureProcessor","Texture2DContent",4641,16469,0,0029507
+"/home/joao/RiderProjects/ProjectA/Project1/Content/shallow135.png","/home/joao/RiderProjects/ProjectA/Project1/Content/shallow135.xnb","TextureProcessor","Texture2DContent",2997,16469,0,00217
+"/home/joao/RiderProjects/ProjectA/Project1/Content/shallow225.png","/home/joao/RiderProjects/ProjectA/Project1/Content/shallow225.xnb","TextureProcessor","Texture2DContent",3060,16469,0,0022593
+"/home/joao/RiderProjects/ProjectA/Project1/Content/shallow315.png","/home/joao/RiderProjects/ProjectA/Project1/Content/shallow315.xnb","TextureProcessor","Texture2DContent",3014,16469,0,0022432
+"/home/joao/RiderProjects/ProjectA/Project1/Content/shallow45.png","/home/joao/RiderProjects/ProjectA/Project1/Content/shallow45.xnb","TextureProcessor","Texture2DContent",3040,16469,0,0022047
+"/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach135.png","/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach135.xnb","TextureProcessor","Texture2DContent",2527,16469,0,0030667
+"/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach225.png","/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach225.xnb","TextureProcessor","Texture2DContent",2521,16469,0,0030986
+"/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach315.png","/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach315.xnb","TextureProcessor","Texture2DContent",2520,16469,0,0027561
+"/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach45.png","/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach45.xnb","TextureProcessor","Texture2DContent",2497,16469,0,0026882

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>/home/joao/RiderProjects/ProjectA/Project1/bin/Debug/net6.0/Content/grass315.png</SourceFile>
+  <SourceTime>2012-11-21T20:47:21-02:00</SourceTime>
+  <DestFile>/home/joao/RiderProjects/ProjectA/Project1/bin/Debug/net6.0/Content/grass315.xnb</DestFile>
+  <DestTime>2024-06-30T23:39:53.5423216-03:00</DestTime>
+  <Importer>TextureImporter</Importer>
+  <ImporterTime>2022-07-26T08:44:56-03:00</ImporterTime>
+  <Processor>TextureProcessor</Processor>
+  <ProcessorTime>2022-07-26T08:44:56-03:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

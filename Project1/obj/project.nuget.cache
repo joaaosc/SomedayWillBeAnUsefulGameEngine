@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "hdjO2ftEgKs=",
+  "success": true,
+  "projectFilePath": "/home/joao/RiderProjects/ProjectA/Project1/Project1.csproj",
+  "expectedPackageFiles": [
+    "/home/joao/.nuget/packages/monogame.framework.desktopgl/3.8.1.303/monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
+    "/home/joao/.nuget/packages/microsoft.netcore.app.ref/6.0.31/microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
+    "/home/joao/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.31/microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
+    "/home/joao/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.31/microsoft.netcore.app.host.linux-x64.6.0.31.nupkg.sha512"
+  ],
+  "logs": []
+}

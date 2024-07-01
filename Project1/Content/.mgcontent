@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>HiDef</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/beach135.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/beach225.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/beach315.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/beach45.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/grass135.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/grass225.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/grass315.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/grass45alt.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/grass45.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/shallow135.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/shallow225.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/shallow315.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/shallow45.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach135.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach225.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach315.png</File>
+    <File>/home/joao/RiderProjects/ProjectA/Project1/Content/straightbeach45.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
