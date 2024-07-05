@@ -55,20 +55,45 @@ namespace Project1._Modelos
 
             return new(telaX, telaY);
         }
+        
+        /// <summary>
+        /// Método para impedir que o jogador passe por tiles selecionados como impassável
+        /// </summary>
+        /// <param name="novoX"></param>
+        /// <param name="novoY"></param>
+        public void MoverTileSelecionado(int novoX, int novoY)
+        {
+            if (!_tiles[novoX, novoY]._tileImpassavel)
+            {
+                _tiles[_tileSelecionadoKeyboard.X,_tileSelecionadoKeyboard.Y].DesselecionarTile();
+        
+                _tileSelecionadoKeyboard.X = novoX;
+                _tileSelecionadoKeyboard.Y = novoY;
+        
+                _tiles[_tileSelecionadoKeyboard.X,_tileSelecionadoKeyboard.Y].SelecionarTile();
+            }
+        }
+        public void TornarImpassavel(int x, int y)
+        {
+            if (x >= 0 && x < _tamanhoDoMaṕa.X && y >= 0 && y < _tamanhoDoMaṕa.Y)
+            {
+                _tiles[x, y]._tileImpassavel = true;
+            }
+            else
+                throw new ArgumentOutOfRangeException("As coordenadas fornecidas estão fora dos limites do mapa.");
+        }
 
         public void Update()
         {
             if (GerenciadorInput.Direcao != Point.Zero)
             {
-                _tiles[_tileSelecionadoKeyboard.X,_tileSelecionadoKeyboard.Y].DesselecionarTile();
-                
-                _tileSelecionadoKeyboard.X =
-                    Math.Clamp(_tileSelecionadoKeyboard.X + GerenciadorInput.Direcao.X, 0, _tamanhoDoMaṕa.X - 1);
-                
-                _tileSelecionadoKeyboard.Y =
-                    Math.Clamp(_tileSelecionadoKeyboard.Y + GerenciadorInput.Direcao.Y, 0, _tamanhoDoMaṕa.Y - 1);
-                
-                _tiles[_tileSelecionadoKeyboard.X,_tileSelecionadoKeyboard.Y].SelecionarTile();
+                var novoX = Math.Clamp(_tileSelecionadoKeyboard.X + GerenciadorInput.Direcao.X, 0, _tamanhoDoMaṕa.X - 1);
+                var novoY = Math.Clamp(_tileSelecionadoKeyboard.Y + GerenciadorInput.Direcao.Y, 0, _tamanhoDoMaṕa.Y - 1);
+
+                MoverTileSelecionado(novoX, novoY);
+
+                // Zera a direção do input após ser usada
+                GerenciadorInput.ZerarDirecao();
             }
         }
         public void Draw()
@@ -78,9 +103,11 @@ namespace Project1._Modelos
                 for (int x = 0; x < _tamanhoDoMaṕa.X; x++)
                 {
                     _tiles[x, y].Draw();
+                    TornarImpassavel(6,5);
                 }
             }
         }
+        
     }
     
 }

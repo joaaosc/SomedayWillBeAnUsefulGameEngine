@@ -11,6 +11,12 @@ public static class GerenciadorInput
     public static Point Direcao => _direcao;
     
     public static Point Posicao_do_Mouse => Mouse.GetState().Position;
+    
+    // Adiciona uma variável de tempo
+    private static double _tempo;
+
+    // Adiciona um contador de frames
+    private static int _contadorFrames = 0;
 
     public static void Update()
     {
@@ -23,6 +29,11 @@ public static class GerenciadorInput
         if (ks.IsKeyDown(Keys.D) && _lastKs.IsKeyUp(Keys.D)) _direcao.X++;
 
         _lastKs = ks;
+    }
+
+    public static void ZerarDirecao()
+    {
+        _direcao = Point.Zero;
     }
 
 }

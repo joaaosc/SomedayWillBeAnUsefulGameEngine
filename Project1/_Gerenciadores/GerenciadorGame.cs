@@ -11,7 +11,7 @@ public class GerenciadorGame
         GerenciadorInput.Update();
         _mapa.Update();
     }
-
+    
     public void Draw()
     {
         _mapa.Draw();
