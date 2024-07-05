@@ -6,6 +6,7 @@ namespace Project1;
 
 public abstract class Globais
 {
+    public readonly Point _tamanhoDoMaṕa = new Point(30, 20);
     public static float SegundosTotais { get; set; }
     public static GraphicsDevice Gd { get; set; }
     public static ContentManager Cm;
