@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Project1;
 
-public class Globais
+public abstract class Globais
 {
     public static float SegundosTotais { get; set; }
     public static GraphicsDevice Gd { get; set; }

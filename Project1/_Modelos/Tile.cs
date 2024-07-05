@@ -8,13 +8,13 @@ public class Tile
     private readonly Texture2D _textura;
     private readonly Vector2 _posicao;
     private bool _tileSelecionado;
-    internal bool _tileImpassavel { get; set; }
+    internal bool _tileImpassavel;
     
-    public Tile(Texture2D textura, Vector2 posicao)
+    public Tile(Texture2D textura, Vector2 posicao,  bool tileImpassavel = false)
     {
         this._textura = textura;
         this._posicao = posicao;
-        this._tileImpassavel = false;
+        this._tileImpassavel = tileImpassavel;
     }
 
     public void SelecionarTile()
@@ -31,7 +31,7 @@ public class Tile
     {
         var cor = Microsoft.Xna.Framework.Color.White;
         if (_tileSelecionado) cor = Color.Red;
-        if (_tileImpassavel) cor = Color.Gray;
+        //if (_tileImpassavel) cor = Color.LightCyan;
 
 
         

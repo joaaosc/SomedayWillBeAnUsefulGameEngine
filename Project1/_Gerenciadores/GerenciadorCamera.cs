@@ -11,10 +11,7 @@ public class GerenciadorCamera
     // fator de escala para definir a velocidade de translação da câmera
     private const float FatorEscala = 0.1f;
 
-    public Matrix Transformacao
-    {
-        get { return Matrix.CreateTranslation(new Vector3(-_posicao, 0)); }
-    }
+    public Matrix Transformacao => Matrix.CreateTranslation(new Vector3(-_posicao, 0));
 
     public void Update()
     {

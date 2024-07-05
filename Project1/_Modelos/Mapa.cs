@@ -73,14 +73,16 @@ namespace Project1._Modelos
                 _tiles[_tileSelecionadoKeyboard.X,_tileSelecionadoKeyboard.Y].SelecionarTile();
             }
         }
-        public void TornarImpassavel(int x, int y)
+        public void TornarImpassavel(int x, int y, Texture2D textura)
         {
             if (x >= 0 && x < _tamanhoDoMaṕa.X && y >= 0 && y < _tamanhoDoMaṕa.Y)
             {
-                _tiles[x, y]._tileImpassavel = true;
+                _tiles[x, y] = new Tile(textura, MapaParaTela(x, y), true); // Cria um novo Tile com a nova textura e marca como impassável
             }
             else
+            {
                 throw new ArgumentOutOfRangeException("As coordenadas fornecidas estão fora dos limites do mapa.");
+            }
         }
 
         public void Update()
@@ -103,9 +105,9 @@ namespace Project1._Modelos
                 for (int x = 0; x < _tamanhoDoMaṕa.X; x++)
                 {
                     _tiles[x, y].Draw();
-                    TornarImpassavel(6,5);
-                    TornarImpassavel(6,6);
-                    TornarImpassavel(6,7);
+                    TornarImpassavel(6,5,Globais.Cm.Load<Texture2D>("shallow45"));
+                    TornarImpassavel(6,6,Globais.Cm.Load<Texture2D>("shallow45"));
+                    TornarImpassavel(6,7,Globais.Cm.Load<Texture2D>("shallow45"));
                 }
             }
         }
