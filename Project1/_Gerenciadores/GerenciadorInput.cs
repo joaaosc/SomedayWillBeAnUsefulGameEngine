@@ -12,21 +12,32 @@ public static class GerenciadorInput
     
     public static Point Posicao_do_Mouse => Mouse.GetState().Position;
     
-    // Adiciona uma variável de tempo
-    private static double _tempo;
-
+    
     // Adiciona um contador de frames
     private static int _contadorFrames = 0;
+
+    // Adiciona uma variável de velocidade
+    private static float _velocidade { get; set; } = 4f;
 
     public static void Update()
     {
         var ks = Keyboard.GetState();
-        _direcao = Point.Zero;
 
-        if (ks.IsKeyDown(Keys.W) && _lastKs.IsKeyUp(Keys.W)) _direcao.Y--;
-        if (ks.IsKeyDown(Keys.S) && _lastKs.IsKeyUp(Keys.S)) _direcao.Y++;
-        if (ks.IsKeyDown(Keys.A) && _lastKs.IsKeyUp(Keys.A)) _direcao.X--;
-        if (ks.IsKeyDown(Keys.D) && _lastKs.IsKeyUp(Keys.D)) _direcao.X++;
+        // Atualiza o contador de frames
+        _contadorFrames++;
+
+        // Permite o movimento apenas se o contador de frames for maior que a velocidade
+        if (_contadorFrames > _velocidade)
+        {
+            if (ks.IsKeyDown(Keys.W)) _direcao.Y--;
+            else if (ks.IsKeyDown(Keys.S)) _direcao.Y++;
+            else if (ks.IsKeyDown(Keys.A)) _direcao.X--;
+            else if (ks.IsKeyDown(Keys.D)) _direcao.X++;
+            else _direcao = Point.Zero; // Zera a direção se nenhuma tecla direcional estiver sendo pressionada
+
+            // Redefine o contador de frames
+            _contadorFrames = 0;
+        }
 
         _lastKs = ks;
     }

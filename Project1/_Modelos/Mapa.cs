@@ -8,8 +8,8 @@ namespace Project1._Modelos
 {
     public class Mapa
     {
-        private readonly Point _tamanhoDoMaṕa = new Point(20, 10);
-        private readonly Vector2 _offsetMapa = new Vector2(5.23f, 3);
+        private readonly Point _tamanhoDoMaṕa = new Point(30, 20);
+        private readonly Vector2 _offsetMapa = new Vector2(5.5f, 0.5f);
         
         private readonly Point _tamanhoTile;
         private Point _tileSelecionadoKeyboard = new(0, 0);
@@ -104,6 +104,8 @@ namespace Project1._Modelos
                 {
                     _tiles[x, y].Draw();
                     TornarImpassavel(6,5);
+                    TornarImpassavel(6,6);
+                    TornarImpassavel(6,7);
                 }
             }
         }
