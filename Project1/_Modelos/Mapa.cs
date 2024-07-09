@@ -8,13 +8,16 @@ namespace Project1._Modelos
 {
     public class Mapa
     {
-        private readonly Point _tamanhoDoMaṕa = new Point(30, 20);
-        private readonly Vector2 _offsetMapa = new Vector2(5.5f, 0.5f);
+        public static readonly Point _tamanhoDoMaṕa = new Point(100, 100);
+        private static readonly Vector2 _offsetMapa = new Vector2(5.5f, 0.5f);
         
-        private readonly Point _tamanhoTile;
+        private static Point _tamanhoTile;
         private Point _tileSelecionadoKeyboard = new(0, 0);
 
-        private readonly Tile[,] _tiles;
+        private static Tile[,] _tiles;
+
+        public int LarguraMapa = _tamanhoDoMaṕa.X;
+        public int AlturaMapa = _tamanhoDoMaṕa.Y;
 
 
         public Mapa()
@@ -27,7 +30,7 @@ namespace Project1._Modelos
                 Globais.Cm.Load<Texture2D>("grass45"),
                 Globais.Cm.Load<Texture2D>("grass135"),
                 Globais.Cm.Load<Texture2D>("grass225"),
-                Globais.Cm.Load<Texture2D>("grass315")
+                //Globais.Cm.Load<Texture2D>("grass315")
             };
 
             _tamanhoTile.X = texturas[0].Width;
@@ -45,14 +48,19 @@ namespace Project1._Modelos
             }
             
             _tiles[_tileSelecionadoKeyboard.X,_tileSelecionadoKeyboard.Y].SelecionarTile();
-            
         }
 
-        private Vector2 MapaParaTela(int x, int y)
+        private static Vector2 MapaParaTela(float x, float y)
         {
             var telaX = ((x - y) * _tamanhoTile.X / 2) + (_offsetMapa.X * _tamanhoTile.X);
             var telaY = ((x + y) * _tamanhoTile.Y / 2) + (_offsetMapa.Y * _tamanhoTile.Y);
 
+            int randomFloat = new Random().Next(0,2);
+            
+            telaY += (new Simplex.Noise().CalcPixel2D((int)x * randomFloat, (int)y * randomFloat, new Random().NextSingle())*0.0211f);
+            telaX += (new Simplex.Noise().CalcPixel2D((int)x * randomFloat, (int)y * randomFloat, new Random().NextSingle())*0.0211f);
+
+            
             return new(telaX, telaY);
         }
         
@@ -73,7 +81,7 @@ namespace Project1._Modelos
                 _tiles[_tileSelecionadoKeyboard.X,_tileSelecionadoKeyboard.Y].SelecionarTile();
             }
         }
-        public void TornarImpassavel(int x, int y, Texture2D textura)
+        private static void TornarImpassavel(int x, int y, Texture2D textura)
         {
             if (x >= 0 && x < _tamanhoDoMaṕa.X && y >= 0 && y < _tamanhoDoMaṕa.Y)
             {
@@ -84,8 +92,31 @@ namespace Project1._Modelos
                 throw new ArgumentOutOfRangeException("As coordenadas fornecidas estão fora dos limites do mapa.");
             }
         }
-
-        public void Update()
+        
+        public void AlterarTextura(int x, int y, Texture2D textura, bool impassavelOuNao)
+        {
+            if (x >= 0 && x < _tamanhoDoMaṕa.X && y >= 0 && y < _tamanhoDoMaṕa.Y)
+            {
+                _tiles[x, y] = new Tile(textura, MapaParaTela(x, y), impassavelOuNao);      // Cria um novo Tile com a nova textura e o estado de passabilidade especificado
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("As coordenadas fornecidas estão fora dos limites do mapa.");
+            }
+        }
+        
+        public Tile ObterTile(int x, int y)
+        {
+            if (x >= 0 && x < LarguraMapa && y >= 0 && y < AlturaMapa)
+            {
+                return _tiles[x, y];
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("As coordenadas fornecidas estão fora dos limites do mapa.");
+            }
+        }
+         public void Update()
         {
             if (GerenciadorInput.Direcao != Point.Zero)
             {
@@ -104,14 +135,21 @@ namespace Project1._Modelos
             {
                 for (int x = 0; x < _tamanhoDoMaṕa.X; x++)
                 {
+
+                    //TornarImpassavel(6,5,Globais.Cm.Load<Texture2D>("shallow45"));
+                    //TornarImpassavel(6,6,Globais.Cm.Load<Texture2D>("shallow45"));
+                    //TornarImpassavel(6,7,Globais.Cm.Load<Texture2D>("shallow45"));
                     _tiles[x, y].Draw();
-                    TornarImpassavel(6,5,Globais.Cm.Load<Texture2D>("shallow45"));
-                    TornarImpassavel(6,6,Globais.Cm.Load<Texture2D>("shallow45"));
-                    TornarImpassavel(6,7,Globais.Cm.Load<Texture2D>("shallow45"));
                 }
             }
         }
-        
+        public static Mapa GerarMapa()
+        {
+            Mapa mapa = new Mapa();
+            // Aqui você pode adicionar qualquer lógica adicional necessária para configurar o mapa.
+            return mapa;
+        }
     }
+    
     
 }

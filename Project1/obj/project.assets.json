@@ -47,6 +47,15 @@
             "rid": "win-x86"
           }
         }
+      },
+      "Simplex/2.0.6": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Simplex.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Simplex.dll": {}
+        }
       }
     }
   },
@@ -72,11 +81,26 @@
         "runtimes/win-x86/native/SDL2.dll",
         "runtimes/win-x86/native/soft_oal.dll"
       ]
+    },
+    "Simplex/2.0.6": {
+      "sha512": "A92gG0OnG+Sr5TAbjzUTjGASAqUqZNBYMkTWYmts1alkCIBG9jElBWUXLnUPtemU/Ya4DpJ/Lt8rD5D2DAXScg==",
+      "type": "package",
+      "path": "simplex/2.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/netcoreapp3.1/Simplex.dll",
+        "simplex.2.0.6.nupkg.sha512",
+        "simplex.nuspec",
+        "simplex.png"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "MonoGame.Framework.DesktopGL >= 3.8.1.303"
+      "MonoGame.Framework.DesktopGL >= 3.8.1.303",
+      "Simplex >= 2.0.6"
     ]
   },
   "packageFolders": {
@@ -110,6 +134,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -119,6 +148,10 @@
           "MonoGame.Framework.DesktopGL": {
             "target": "Package",
             "version": "[3.8.1.303, )"
+          },
+          "Simplex": {
+            "target": "Package",
+            "version": "[2.0.6, )"
           }
         },
         "imports": [

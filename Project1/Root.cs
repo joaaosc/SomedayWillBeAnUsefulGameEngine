@@ -11,6 +11,7 @@ public class Root : Game
     private SpriteBatch _spriteBatch;
     private _Gerenciadores.GerenciadorGame _gameManager;
     private Mapa _mapa;
+    private GeradorDeTerreno _geradores;
 
     public Root()
     {
@@ -21,14 +22,16 @@ public class Root : Game
 
     protected override void Initialize()
     {
-        _graphics.PreferredBackBufferWidth = 1024;
-        _graphics.PreferredBackBufferHeight = 768;
+        _graphics.PreferredBackBufferWidth = 2048;
+        _graphics.PreferredBackBufferHeight = 1024;
         _graphics.ApplyChanges();
 
         Globais.Cm = Content;
 
         _gameManager = new();
-
+        _geradores = new GeradorDeTerreno();
+        _geradores.GerarRio(_mapa);
+        
         base.Initialize();
 
     }

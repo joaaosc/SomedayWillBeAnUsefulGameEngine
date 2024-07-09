@@ -40,3 +40,5 @@
 /home/joao/RiderProjects/ProjectA/Project1/obj/Release/net6.0/Project1.pdb
 /home/joao/RiderProjects/ProjectA/Project1/obj/Release/net6.0/Project1.genruntimeconfig.cache
 /home/joao/RiderProjects/ProjectA/Project1/obj/Release/net6.0/ref/Project1.dll
+/home/joao/RiderProjects/ProjectA/Project1/bin/Release/net6.0/Simplex.dll
+/home/joao/RiderProjects/ProjectA/Project1/obj/Release/net6.0/Project1.sourcelink.json

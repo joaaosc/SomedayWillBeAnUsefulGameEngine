@@ -17,6 +17,15 @@ public class Tile
         this._tileImpassavel = tileImpassavel;
     }
 
+    public Texture2D GetTexture()
+    {
+        return _textura;
+    }
+
+    public bool verificarImpassaavel()
+    {
+        return _tileImpassavel;
+    }
     public void SelecionarTile()
     {
         _tileSelecionado = true;
@@ -37,4 +46,6 @@ public class Tile
         
         Globais.Sb.Draw(_textura,_posicao,cor);
     }
+    
+    
 }

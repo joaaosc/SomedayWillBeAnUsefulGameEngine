@@ -40,3 +40,5 @@
 /home/joao/RiderProjects/ProjectA/Project1/bin/Debug/net6.0/Content/beach135.png
 /home/joao/RiderProjects/ProjectA/Project1/bin/Debug/net6.0/Content/beach225.png
 /home/joao/RiderProjects/ProjectA/Project1/bin/Debug/net6.0/Content/beach315.png
+/home/joao/RiderProjects/ProjectA/Project1/bin/Debug/net6.0/Simplex.dll
+/home/joao/RiderProjects/ProjectA/Project1/obj/Debug/net6.0/Project1.sourcelink.json
