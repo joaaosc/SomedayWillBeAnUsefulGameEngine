@@ -23,8 +23,8 @@ public class GeradorDeTerreno
         // Escolha um ponto inicial e final aleatório para o rio
         int startX = random.Next(0, _mapa.LarguraMapa);
         int startY = random.Next(0, _mapa.AlturaMapa);
-        int endX = random.Next(10, _mapa.LarguraMapa);
-        int endY = random.Next(10, _mapa.AlturaMapa);
+        int endX = random.Next(0, _mapa.LarguraMapa);
+        int endY = random.Next(0, _mapa.AlturaMapa);
 
         // Use um algoritmo de caminhada aleatória para traçar um caminho do ponto inicial ao final
         List<Point> riverPath  = RandomWalk(startX, startY, endX, endY);
